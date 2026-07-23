@@ -56,15 +56,14 @@ export async function getDB(): Promise<IDBPDatabase<TasbihDB>> {
 
 export async function seedDefaultZikirs(): Promise<void> {
   const db = await getDB()
-  const existing = await db.count('zikirs')
-  if (existing > 0) return
-
   const tx = db.transaction('zikirs', 'readwrite')
   const now = Date.now()
   for (let i = 0; i < DEFAULT_ZIKIRS.length; i++) {
+    const id = `default-${i}`
+    if (await tx.store.get(id)) continue
     const z = DEFAULT_ZIKIRS[i]!
     await tx.store.add({
-      id: `default-${i}`,
+      id,
       ...z,
       created_at: now + i,
     })

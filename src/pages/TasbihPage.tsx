@@ -123,10 +123,12 @@ export function TasbihPage() {
           </div>
         </div>
 
+        <div className="flex-1" />
+
         {/* Tap button */}
         <button
           onClick={handleTap}
-          className={`relative mt-10 w-56 h-56 rounded-full flex items-center justify-center text-white font-bold text-xl tracking-wider uppercase transition-transform active:scale-95 ${
+          className={`relative w-64 h-64 rounded-full flex items-center justify-center text-white font-bold text-2xl tracking-wider uppercase transition-transform active:scale-95 ${
             isComplete
               ? 'bg-amber-300 dark:bg-amber-light shadow-[0_4px_16px_rgba(196,136,58,0.35)]'
               : 'bg-teal-400 dark:bg-teal-light shadow-[0_4px_16px_rgba(45,122,126,0.35)]'

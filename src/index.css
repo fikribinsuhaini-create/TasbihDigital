@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal-50: #E4F0F0;
+  --color-teal-100: #C8E0E1;
+  --color-teal-200: #91C1C3;
+  --color-teal-300: #5AA2A5;
+  --color-teal-400: #2D7A7E;
+  --color-teal-500: #2D7A7E;
+  --color-teal-600: #256467;
+  --color-teal-700: #1D4E51;
+  --color-teal-800: #15393B;
+  --color-teal-900: #0D2425;
+  --color-teal-light: #52B5BA;
+
+  --color-amber-50: #F5EDE0;
+  --color-amber-100: #EBDBC1;
+  --color-amber-200: #D7B783;
+  --color-amber-300: #C4883A;
+  --color-amber-400: #C4883A;
+  --color-amber-500: #A6732F;
+  --color-amber-600: #885E26;
+  --color-amber-light: #D9A34E;
+
+  --color-completion: #3D8B6E;
+  --color-completion-light: #5DB08E;
+
+  --color-surface: #F0EDEA;
+  --color-surface-card: #FFFFFF;
+  --color-surface-dark: #141418;
+  --color-surface-card-dark: #1E1E26;
+
+  --color-ink: #28282C;
+  --color-ink-sub: #6B665E;
+  --color-ink-muted: #A09A92;
+  --color-ink-line: #E4E0DA;
+  --color-ink-dark: #E0DCD4;
+  --color-ink-sub-dark: #908A82;
+  --color-ink-muted-dark: #5C5850;
+  --color-ink-line-dark: #2E2E38;
+
+  --color-nav: #FAFAF8;
+  --color-nav-dark: #1A1A22;
+
+  --font-display: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+  --font-arabic: "Noto Naskh Arabic", "Traditional Arabic", "Simplified Arabic", "Arabic Typesetting", serif;
+  --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  user-select: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tabular nums for counters */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Safe area padding for notched phones */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}

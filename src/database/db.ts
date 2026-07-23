@@ -25,8 +25,12 @@ const DEFAULT_ZIKIRS: Omit<Zikir, 'id' | 'created_at'>[] = [
   { name: 'SubhanAllah', arabic_text: 'سبحان الله', meaning: 'Glory be to God', default_target: 33, is_custom: false },
   { name: 'Alhamdulillah', arabic_text: 'الحمد لله', meaning: 'Praise be to God', default_target: 33, is_custom: false },
   { name: 'Allahu Akbar', arabic_text: 'الله أكبر', meaning: 'God is the Greatest', default_target: 33, is_custom: false },
+  { name: 'Tahlil', arabic_text: 'لا إله إلاّ الله', meaning: '', default_target: 100, is_custom: false },
   { name: 'Astaghfirullah', arabic_text: 'أستغفر الله', meaning: 'I seek forgiveness from God', default_target: 100, is_custom: false },
   { name: 'Selawat', arabic_text: 'اللهم صل على محمد', meaning: 'O God, send blessings upon Muhammad', default_target: 100, is_custom: false },
+  { name: 'Subhanallah Wabihamdihi Subhanallahil ‘Adhim', arabic_text: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ العَظِيْمِ', meaning: '', default_target: 100, is_custom: false },
+  { name: 'Tahlil Panjang', arabic_text: 'لا إلهَ إلا اللهُ وحدَهُ لا شريكَ لهُ، لهُ المُلكُ ولهُ الحمدُ، وهوَ على كلِّ شيءٍ قديرٌ', meaning: '', default_target: 100, is_custom: false },
+  { name: 'Hawqolah', arabic_text: 'لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِٱللَّٰ', meaning: '', default_target: 100, is_custom: false },
 ]
 
 let dbInstance: IDBPDatabase<TasbihDB> | null = null
